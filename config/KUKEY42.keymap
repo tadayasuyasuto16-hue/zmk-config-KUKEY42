@@ -15,7 +15,14 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        L2+hankaku {
+            bindings = <&lt 2 LA(GRAVE)>;
+            key-positions = <39>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -53,6 +60,27 @@
 
             tap-ms = <20>;
         };
+
+        L2_hankaku: L2_hankaku {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L2_HANKAKU";
+            #binding-cells = <0>;
+            bindings = <&lt 2 LA(GRAVE)>, <&tog 2>;
+        };
+
+        L3_kana: L3_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L3_KANA";
+            #binding-cells = <0>;
+            bindings = <&lt 3 INT_KANA>, <&tog 3>;
+        };
+
+        L1_henkan: L1_henkan {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L1_HENKAN";
+            #binding-cells = <0>;
+            bindings = <&lt 1 INT_HENKAN>, <&tog 1>;
+        };
     };
 
     keymap {
@@ -60,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R  &kp T                                           &kp Y        &kp U  &kp I      &kp O      &kp P
-&kp A             &kp S         &kp D         &kp F  &kp G        &kp BACKSPACE       &kp DELETE     &kp H        &kp J  &kp K      &kp L      &mt RIGHT_SHIFT SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &kp B        &kp COMMA           &kp PERIOD     &kp N        &kp M  &mkp LCLK  &mkp RCLK  &kp UNDERSCORE
-&kp B             &kp LEFT_ALT  &kp LEFT_WIN  &mo 2  &lt 2 SPACE  &tapdance_kana      &kp BACKSPACE  &lt 3 ENTER                               &kp LS(LG(S))
+&kp Q  &kp W        &kp E           &kp R        &kp T                                      &kp Y        &kp U        &kp I           &kp O        &kp P
+&kp A  &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G       &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z  &kp X        &kp C           &kp V        &kp B       &kp SPACE          &kp ENTER   &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
+&none  &kp COMMA    &kp PERIOD      &to 0        &L1_henkan  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &none
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
