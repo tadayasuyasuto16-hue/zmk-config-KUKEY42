@@ -89,11 +89,20 @@
             bindings = <&lt 1 INT_HENKAN>, <&tog 1>;
         };
 
-        new_behaviordfs: new_behaviordfs {
+        P_PW: P_PW {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIORDFS";
+            label = "P_PW";
             #binding-cells = <0>;
             bindings = <&kp P>, <&PW>;
+
+            tapping-term-ms = <175>;
+        };
+
+        q_ctrl_alt_del: q_ctrl_alt_del {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Q_CTRL_ALT_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&mt Q LC(LA(DELETE))>;
 
             tapping-term-ms = <175>;
         };
@@ -104,10 +113,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W        &kp E           &kp R        &kp T                                      &kp Y        &kp U        &kp I           &kp O        &kp P
-&kp A  &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G       &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z  &kp X        &kp C           &kp V        &kp B       &kp SPACE          &kp ENTER   &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&none  &kp COMMA    &kp PERIOD      &to 0        &L1_henkan  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &none
+&q_ctrl_alt_del  &kp W        &kp E           &kp R        &kp T                                      &kp Y        &kp U        &kp I           &kp O        &P_PW
+&kp A            &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G       &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z            &kp X        &kp C           &kp V        &kp B       &kp SPACE          &kp ENTER   &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
+&none            &kp COMMA    &kp PERIOD      &to 0        &L1_henkan  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
