@@ -88,6 +88,15 @@
             #binding-cells = <0>;
             bindings = <&lt 1 INT_HENKAN>, <&tog 1>;
         };
+
+        new_behaviordfs: new_behaviordfs {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIORDFS";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&PW>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
