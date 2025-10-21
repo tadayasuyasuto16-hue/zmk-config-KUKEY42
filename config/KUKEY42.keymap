@@ -31,6 +31,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        PW: PW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(W) &kp S &kp POUND &kp N2 &kp N0 &kp N2 &kp N0 &kp N0 &kp N5 &kp N0 &kp N7>;
+            label = "PW";
+        };
     };
 
     behaviors {
