@@ -106,6 +106,48 @@
 
             tapping-term-ms = <175>;
         };
+
+        cs_left_c_left: cs_left_c_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CS_LEFT_C_LEFT";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LS(LC(LEFT)) LS(LC(LEFT))>,
+                <&mt LC(LEFT) LC(LEFT_ARROW)>;
+
+            tapping-term-ms = <175>;
+        };
+
+        cs_up_c_up: cs_up_c_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CS_UP_C_UP";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LS(LC(UP_ARROW)) LS(LC(UP_ARROW))>,
+                <&mt LC(LEFT) LC(LEFT_ARROW)>;
+
+            tapping-term-ms = <175>;
+        };
+
+        cs_down_c_down: cs_down_c_down {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CS_DOWN_C_DOWN";
+            #binding-cells = <0>;
+            bindings = <&mt LS(LC(DOWN)) LS(LC(DOWN))>, <&mt LC(DOWN) LC(DOWN)>;
+
+            tapping-term-ms = <175>;
+        };
+
+        cs_right_c_right: cs_right_c_right {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CS_RIGHT_C_RIGHT";
+            #binding-cells = <0>;
+            bindings =
+                <&mt LS(LC(RIGHT)) LS(LC(RIGHT))>,
+                <&mt LC(RIGHT) LC(RIGHT)>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
@@ -124,10 +166,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10
-&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                          &kp ESCAPE
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp F7          &kp F8        &kp F9          &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT        &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                                                &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -135,10 +177,10 @@
 
         NUM {
             bindings = <
-&kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                             &kp TAB       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &trans      &kp KP_SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt RIGHT_SHIFT SINGLE_QUOTE
-&mt LEFT_SHIFT KP_PLUS   &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp DELETE  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&trans                   &trans           &trans            &trans                &trans     &trans         &trans      &trans                                                           &kp KP_NUMLOCK
+&kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                                  &kp TAB       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
+&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &kp PLUS         &kp KP_SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt RIGHT_SHIFT SINGLE_QUOTE
+&mt LEFT_SHIFT KP_PLUS   &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp KP_SUBTRACT  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&trans                   &trans           &trans            &trans                &trans     &trans         &trans           &trans                                                           &kp KP_NUMLOCK
             >;
         };
 
