@@ -166,10 +166,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp F7          &kp F8        &kp F9          &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT        &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT
-&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT
-&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                                                &kp ESCAPE
+&trans  &trans  &trans  &trans  &trans                      &trans  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &trans  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                                                  &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
