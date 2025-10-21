@@ -35,8 +35,29 @@
         PW: PW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(W) &kp S &kp POUND &kp N2 &kp N0 &kp N2 &kp N0 &kp N0 &kp N5 &kp N0 &kp N7>;
+            bindings = <&kp LS(W) &kp S &kp POUND &kp N2 &kp N0 &kp N2 &kp N0 &kp N0 &kp N5 &kp N0 &kp N7>;
             label = "PW";
+        };
+
+        kakko_1: kakko_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp LPAR &kp RPAR &kp LEFT>;
+            label = "KAKKO_1";
+        };
+
+        kakko_2: kakko_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "KAKKO_2";
+        };
+
+        kakko_3: kakko_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE) &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
+            label = "KAKKO_3";
         };
     };
 
@@ -166,10 +187,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &trans  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                                                  &kp ESCAPE
+&trans  &trans  &trans  &trans  &trans                      &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 6       &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&trans  &trans  &trans  &trans  &trans  &mo 1       &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
