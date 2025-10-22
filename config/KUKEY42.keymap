@@ -42,7 +42,10 @@
         kakko_1: kakko_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LPAR &kp RPAR &kp LEFT>;
+            bindings =
+                <&kp LA(GRAVE) &kp LPAR &kp RPAR &kp LEFT>,
+                <&macro_press>;
+
             label = "KAKKO_1";
         };
 
