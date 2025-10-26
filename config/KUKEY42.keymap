@@ -172,6 +172,15 @@
 
             tapping-term-ms = <175>;
         };
+
+        L1_space: L1_space {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L1_SPACE";
+            #binding-cells = <0>;
+            bindings = <&lt 1 SPACE>, <&tog 1>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
@@ -179,10 +188,10 @@
 
         default_layer {
             bindings = <
-&q_ctrl_alt_del  &kp W        &kp E           &kp R        &kp T                                      &kp Y        &kp U        &kp I           &kp O        &P_PW
-&kp A            &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G       &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z            &kp X        &kp C           &kp V        &kp B       &kp SPACE          &kp DELETE  &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&none            &kp COMMA    &kp PERIOD      &to 0        &L1_henkan  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &mt LEFT_GUI ENTER
+&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y        &kp U        &kp I           &kp O        &P_PW
+&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp DELETE  &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
+&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp PERIOD      &to 0        &L1_space  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -201,10 +210,10 @@
 
         NUM {
             bindings = <
-&kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                                  &kp TAB       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &kp PLUS         &kp KP_SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt RIGHT_SHIFT SINGLE_QUOTE
-&mt LEFT_SHIFT KP_PLUS   &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp KP_SUBTRACT  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&mt C INT_HENKAN         &trans           &trans            &trans                &trans     &trans         &trans           &trans                                                           &kp KP_NUMLOCK
+&kp LS(INTERNATIONAL_1)  &kp LEFT_ALT     &kp ASTERISK      &kp LEFT_PARENTHESIS  &mkp MCLK                               &kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
+&kp MINUS                &kp UNDERSCORE   &mo 5             &mkp LCLK             &mkp RCLK  &trans         &trans        &kp KP_PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&mt LEFT_SHIFT KP_PLUS   &kp KP_ASTERISK  &kp LEFT_BRACKET  &kp LC(V)             &kp LC(C)  &kp LC(Z)      &kp KP_EQUAL  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&mt C INT_HENKAN         &trans           &trans            &trans                &trans     &trans         &trans        &trans                                                           &trans
             >;
         };
 
