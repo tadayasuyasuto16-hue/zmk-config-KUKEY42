@@ -198,7 +198,7 @@
 
         default_layer {
             bindings = <
-&q_ctrl_alt_del             &kp W               &kp E                &kp R        &kp T                                     &kp Y        &kp U        &kp I           &kp O        &P_PW
+&q_ctrl_alt_del             &kp W               &kp E                &kp R        &kp T                                     &kp Y        &kp U        &kp I           &bootloader  &P_PW
 &kp A                       &mt LCTRL S         &mt LEFT_ALT D       &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H        &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
 &kp Z                       &kp X               &kp C                &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N        &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
 &mt INTERNATIONAL_4 ESCAPE  &Layer_tap 0 COMMA  &Layer_tap 0 PERIOD  &to 0        &L1_space  &L2_hankaku        &L3_kana    &lt 3 ENTER                                            &mt LEFT_GUI ENTER
