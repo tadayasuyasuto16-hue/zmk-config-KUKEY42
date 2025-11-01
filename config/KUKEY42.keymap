@@ -209,10 +209,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE                            &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mo 6       &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&trans  &trans  &trans  &trans                &trans                 &mo 1       &trans  &trans                                                    &trans
+&trans  &kp PAGE_DOWN   &kp PG_UP     &kp LEFT_BRACE        &kp RIGHT_BRACE                            &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&trans  &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&trans  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mo 6       &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&trans  &lt 0 END       &lt 0 HOME    &trans                &trans                 &mo 1       &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
