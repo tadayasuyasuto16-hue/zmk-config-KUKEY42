@@ -57,6 +57,41 @@
             bindings = <&kp LA(GRAVE) &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
             label = "KAKKO_3";
         };
+
+        Align_L: Align_L {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp L>;
+            label = "ALIGN_L";
+        };
+
+        Align_C: Align_L1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp C>;
+            label = "ALIGN_L1";
+        };
+
+        Align_R: Align_R {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp R>;
+            label = "ALIGN_R";
+        };
+
+        Align_T: Align_T {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp T>;
+            label = "ALIGN_T";
+        };
+
+        Align_B: Align_B {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp B>;
+            label = "ALIGN_B";
+        };
     };
 
     behaviors {
@@ -205,19 +240,19 @@
 
         Numbers {
             bindings = <
-&kp F1            &kp F2   &kp F3                &kp F4                &kp F5                                                &kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
-&kp F6            &kp F7   &kp F8                &kp F9                &kp F10            &trans               &trans        &kp KP_PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp F11           &kp F12  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP      &kp KP_EQUAL  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&mt C INT_HENKAN  &trans   &trans                &trans                &trans             &trans               &trans        &trans                                                           &trans
+&kp F1            &kp F2                &kp F3                &kp F4           &kp F5                             &kp ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
+&kp F6            &kp F7                &kp F8                &kp F9           &kp F10  &trans      &trans        &kp KP_PLUS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&kp F11           &kp F12               &kp C_VOL_DN          &kp C_VOLUME_UP  &none    &trans      &kp KP_EQUAL  &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&mt C INT_HENKAN  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans           &trans   &trans      &trans        &trans                                                           &trans
             >;
         };
 
         Symbols {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                           &kp LS(PIPE)   &none  &none  &none  &kp LS(PRCNT)
-&kp AT            &kp SEMI           &kp LS(DLLR)     &none         &kp R                     &none                 &to 4  &kp LS(POUND)  &none  &none  &none  &none
-&none             &none              &kp COLON        &kp LS(PIPE)  &none                     &none                 &none  &kp LS(AMPS)   &none  &none  &none  &kp LS(INTERNATIONAL_1)
-&none             &none              &none            &none         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &none  &none                               &none
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                            &kp LS(PIPE)   &none  &none  &none  &kp LS(PRCNT)
+&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)             &trans                &trans  &kp LS(POUND)  &none  &none  &none  &none
+&none             &none              &kp COLON        &kp LS(PIPE)  &none                     &none                 &none   &kp LS(AMPS)   &none  &none  &none  &kp LS(INTERNATIONAL_1)
+&none             &none              &none            &none         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &none   &none                               &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
