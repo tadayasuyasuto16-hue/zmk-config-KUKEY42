@@ -33,27 +33,6 @@
             bindings = <&kp LS(W) &kp S &kp POUND &kp N2 &kp N0 &kp N2 &kp N0 &kp N0 &kp N5 &kp N0 &kp N7>;
             label = "PW";
         };
-
-        kakko_1: kakko_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LPAR &kp RPAR &kp LEFT>;
-            label = "KAKKO_1";
-        };
-
-        kakko_2: kakko_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
-            label = "KAKKO_2";
-        };
-
-        kakko_3: kakko_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
-            label = "KAKKO_3";
-        };
     };
 
     behaviors {
