@@ -214,10 +214,10 @@
 
         Symbols {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &trans        &kp QUESTION                                            &kp LS(PIPE)   &trans  &trans  &trans  &kp LS(PRCNT)
-&kp AT            &kp SEMI           &kp LS(DLLR)     &trans        &kp R                     &trans                &to 4   &kp LS(POUND)  &trans  &trans  &trans  &trans
-&trans            &trans             &kp COLON        &kp LS(PIPE)  &trans                    &trans                &trans  &kp LS(AMPS)   &trans  &trans  &trans  &kp LS(INTERNATIONAL_1)
-&trans            &trans             &trans           &trans        &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &trans  &trans                                 &trans
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                           &kp LS(PIPE)   &none  &none  &none  &kp LS(PRCNT)
+&kp AT            &kp SEMI           &kp LS(DLLR)     &none         &kp R                     &none                 &to 4  &kp LS(POUND)  &none  &none  &none  &none
+&none             &none              &kp COLON        &kp LS(PIPE)  &none                     &none                 &none  &kp LS(AMPS)   &none  &none  &none  &kp LS(INTERNATIONAL_1)
+&none             &none              &none            &none         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &none  &none                               &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
