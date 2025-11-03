@@ -270,10 +270,10 @@
 
         Symbols {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                            &kp LS(PIPE)   &Align_M  &Align_C  &Align_V  &kp LS(PRCNT)
-&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)             &trans                &trans  &kp LS(POUND)  &Align_L  &Align_T  &Align_B  &Align_R
-&none             &none              &kp COLON        &kp LS(PIPE)  &none                     &none                 &none   &kp LS(AMPS)   &none     &none     &none     &kp LS(INTERNATIONAL_1)
-&none             &none              &none            &none         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &none   &none                                        &none
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                            &kp LS(PIPE)   &Align_M  &Align_C   &Align_V  &kp LS(PRCNT)
+&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)             &trans                &trans  &kp LS(POUND)  &Align_L  &Align_T   &Align_B  &Align_R
+&none             &none              &kp COLON        &kp LS(PIPE)  &none                     &none                 &none   &kp LS(AMPS)   &Align_H  &mkp LCLK  &mkp MB2  &kp LS(INTERNATIONAL_1)
+&none             &none              &none            &none         &mt LEFT_SHIFT LS(SPACE)  &lt 1 LANGUAGE_2      &none   &none                                         &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
