@@ -65,11 +65,11 @@
             label = "ALIGN_L";
         };
 
-        Align_C: Align_L1 {
+        Align_C: Align_C {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp C>;
-            label = "ALIGN_L1";
+            label = "ALIGN_C";
         };
 
         Align_R: Align_R {
@@ -107,11 +107,11 @@
             label = "ALIGN_H";
         };
 
-        Align_V: Align_B {
+        Align_V: Align_V {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT &kp G &kp G &kp A &kp V>;
-            label = "ALIGN_B";
+            label = "ALIGN_V";
         };
     };
 
