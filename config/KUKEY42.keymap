@@ -259,6 +259,15 @@
 
             tapping-term-ms = <130>;
         };
+
+        M_wheelclick: M_wheelclick {
+            compatible = "zmk,behavior-tap-dance";
+            label = "M_WHEELCLICK";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&mkp MB3>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -266,10 +275,10 @@
 
         Letters {
             bindings = <
-&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y  &kp U        &kp I           &kp O        &P_PW
-&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H  &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N  &kp M        &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &to 0                                            &mt LEFT_GUI ENTER
+&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y  &kp U          &kp I           &kp O        &P_PW
+&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H  &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N  &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
+&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &to 0                                              &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -293,6 +302,8 @@
 &kp F11  &kp F12               &kp K_MUTE            &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp KP_EQUAL  &kp KP_N0      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
 &trans   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans      &trans        &trans                                                            &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
         Symbols {
