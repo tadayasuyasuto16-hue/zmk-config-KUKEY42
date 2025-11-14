@@ -166,11 +166,11 @@
             bindings = <&lt 2 LA(GRAVE)>, <&tog 2>;
         };
 
-        L3_kana: L3_kana {
+        L3_esc: L3_esc {
             compatible = "zmk,behavior-tap-dance";
-            label = "L3_KANA";
+            label = "L3_ESC";
             #binding-cells = <0>;
-            bindings = <&lt 3 INT_KANA>, <&tog 3>;
+            bindings = <&lt 3 ESCAPE>, <&tog 3>;
         };
 
         L1_henkan: L1_henkan {
@@ -249,13 +249,13 @@
             tapping-term-ms = <175>;
         };
 
-        asterisk_hat: asterisk_hat {
+        asterisk_caret: asterisk_caret {
             compatible = "zmk,behavior-tap-dance";
-            label = "ASTERISK_HAT";
+            label = "ASTERISK_CARET";
             #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&kp CARET>;
+            bindings = <&kp KP_ASTERISK>, <&kp CARET>;
 
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
         };
 
         M_wheelclick: M_wheelclick {
@@ -273,6 +273,22 @@
             #binding-cells = <0>;
             bindings = <&lt 0 LA(GRAVE)>, <&tog 0>;
         };
+
+        L0_kana: L0_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L0_KANA";
+            #binding-cells = <0>;
+            bindings = <&lt 0 INT_KANA>, <&tog 0>;
+        };
+
+        plus_equall: plus_equall {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PLUS_EQUALL";
+            #binding-cells = <0>;
+            bindings = <&kp LS(EQUAL)>, <&kp EQUAL>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -280,10 +296,10 @@
 
         Letters {
             bindings = <
-&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y       &kp U          &kp I           &kp O        &P_PW
-&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H       &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N       &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &L0hankaku                                              &mt LEFT_GUI ENTER
+&q_ctrl_alt_del      &kp W        &kp E           &kp R        &kp T                                     &kp Y     &kp U        &kp I           &kp O        &P_PW
+&kp A                &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H     &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z                &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N     &kp M        &mkp LCLK       &mkp RCLK    &kp LS(MINUS)
+&kp INTERNATIONAL_4  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_esc     &L0_kana                                            &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -291,10 +307,10 @@
 
         Move {
             bindings = <
-&none  &kp PAGE_DOWN   &kp PG_UP     &kp LS(LEFT_BRACKET)         &kp LS(RIGHT_BRACKET)                                    &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&none  &kp DOWN_ARROW  &kp UP_ARROW  &kp LS(KP_LEFT_PARENTHESIS)  &kp LS(N0)             &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp LBKT                     &kp RBKT               &kp LG(LS(NUMBER_4))      &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&none  &lt 0 END       &lt 0 HOME    &trans                       &trans                 &trans                    &trans  &trans                                                    &trans
+&none  &kp END         &kp HOME      &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)                                    &kakko_3  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&none  &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp LBKT              &kp RBKT               &kp LG(LS(NUMBER_4))      &trans  &kakko_2  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&none  &kp PAGE_DOWN   &kp PAGE_UP   &trans                &trans                 &trans                    &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -302,10 +318,10 @@
 
         Numbers {
             bindings = <
-&kp F1   &kp F2                &kp F3                &kp F4        &kp F5                               &asterisk_hat  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
-&kp F6   &kp F7                &kp F8                &kp F9        &kp F10       &trans      &trans     &kp KP_PLUS    &kp N4  &kp N5  &kp N6  &kp KP_MINUS
-&kp F11  &kp F12               &kp K_MUTE            &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp EQUAL  &kp N0         &kp N1  &kp N2  &kp N3  &kp DOT
-&trans   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans      &trans     &trans                                 &trans
+&kp F1   &kp F2                &kp F3                &kp F4        &kp F5                            &asterisk_caret  &kp N7  &kp N8  &kp N9  &kp SLASH
+&kp F6   &kp F7                &kp F8                &kp F9        &kp F10       &trans      &trans  &plus_equall     &kp N4  &kp N5  &kp N6  &kp MINUS
+&kp F11  &kp F12               &kp K_MUTE            &kp C_VOL_DN  &kp C_VOL_UP  &trans      &trans  &kp N0           &kp N1  &kp N2  &kp N3  &kp DOT
+&trans   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans      &trans  &trans                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
@@ -313,10 +329,10 @@
 
         Symbols {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                       &kp LS(PIPE)   &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
-&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)  &trans      &trans  &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
-&none             &none              &kp COLON        &kp LS(PIPE)  &none          &none       &none   &kp LS(AMPS)   &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
-&bootloader       &none              &none            &trans        &trans         &trans      &trans  &trans                                         &bootloader
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                 &kp LS(PIPE)   &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
+&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)  &trans           &trans       &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
+&none             &none              &kp COLON        &kp LS(PIPE)  &none          &bootloader      &bootloader  &kp LS(AMPS)   &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
+&bootloader       &none              &none            &trans        &trans         &trans           &trans       &trans                                         &bootloader
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
