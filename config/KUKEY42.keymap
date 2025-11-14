@@ -276,7 +276,7 @@
 &q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y  &kp U          &kp I           &kp O        &P_PW
 &kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H  &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
 &kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N  &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &mo 4                                              &mt LEFT_GUI ENTER
+&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &none                                              &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -309,7 +309,7 @@
 &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                       &kp LS(PIPE)   &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
 &kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)  &trans      &trans  &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
 &none             &none              &kp COLON        &kp LS(PIPE)  &none          &none       &none   &kp LS(AMPS)   &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
-&none             &none              &none            &trans        &trans         &trans      &trans  &trans                                         &none
+&bootloader       &none              &none            &trans        &trans         &trans      &trans  &trans                                         &bootloader
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
