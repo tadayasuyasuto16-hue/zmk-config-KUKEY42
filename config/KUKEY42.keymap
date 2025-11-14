@@ -286,10 +286,10 @@
 
         Move {
             bindings = <
-&bootloader  &kp PAGE_DOWN   &kp PG_UP     &kp LEFT_BRACE        &kp RIGHT_BRACE                                          &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&none        &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&none        &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LG(LS(NUMBER_4))      &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&none        &lt 0 END       &lt 0 HOME    &trans                &trans                 &trans                    &trans  &trans                                                    &trans
+&bootloader  &kp PAGE_DOWN   &kp PG_UP     &kp LEFT_BRACE           &kp RIGHT_BRACE                                             &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&none        &kp DOWN_ARROW  &kp UP_ARROW  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&none        &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACE           &kp RIGHT_BRACE           &kp LG(LS(NUMBER_4))      &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&none        &lt 0 END       &lt 0 HOME    &trans                   &trans                    &trans                    &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -297,10 +297,10 @@
 
         Numbers {
             bindings = <
-&kp F1   &kp F2                &kp F3                &kp F4        &kp F5                                  &asterisk_hat  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE
-&kp F6   &kp F7                &kp F8                &kp F9        &kp F10       &trans      &trans        &kp KP_PLUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp F11  &kp F12               &kp K_MUTE            &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp KP_EQUAL  &kp KP_N0      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
-&trans   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans      &trans        &trans                                                            &trans
+&kp F1   &kp F2                &kp F3                &kp F4        &kp F5                               &asterisk_hat  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
+&kp F6   &kp F7                &kp F8                &kp F9        &kp F10       &trans      &trans     &kp KP_PLUS    &kp N4  &kp N5  &kp N6  &kp KP_MINUS
+&kp F11  &kp F12               &kp K_MUTE            &kp C_VOL_DN  &kp C_VOL_UP  &trans      &kp EQUAL  &kp N0         &kp N1  &kp N2  &kp N3  &kp DOT
+&trans   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans      &trans     &trans                                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
