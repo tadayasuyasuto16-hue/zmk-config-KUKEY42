@@ -266,6 +266,13 @@
 
             tapping-term-ms = <150>;
         };
+
+        L0hankaku: L0hankaku {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L0HANKAKU";
+            #binding-cells = <0>;
+            bindings = <&lt 0 LA(GRAVE)>, <&tog 0>;
+        };
     };
 
     keymap {
@@ -273,10 +280,10 @@
 
         Letters {
             bindings = <
-&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y  &kp U          &kp I           &kp O        &P_PW
-&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H  &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N  &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &none                                              &mt LEFT_GUI ENTER
+&q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y       &kp U          &kp I           &kp O        &P_PW
+&kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H       &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
+&kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N       &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
+&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &L0hankaku                                              &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
