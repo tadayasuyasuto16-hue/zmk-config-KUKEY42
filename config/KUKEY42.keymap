@@ -55,7 +55,9 @@
         kakko_1: kakko_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>, <&macro_press>;
+            bindings =
+                <&kp ASTERISK &kp LEFT_PARENTHESIS &kp LEFT>,
+                <&macro_press>;
 
             label = "KAKKO_1";
         };
@@ -63,14 +65,14 @@
         kakko_2: kakko_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
             label = "KAKKO_2";
         };
 
         kakko_3: kakko_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
+            bindings = <&kp RIGHT_BRACE &kp PIPE &kp LEFT>;
             label = "KAKKO_3";
         };
 
@@ -298,7 +300,7 @@
             bindings = <
 &q_ctrl_alt_del      &kp W        &kp E           &kp R        &kp T                                     &kp Y     &kp U        &kp I           &kp O        &P_PW
 &kp A                &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H     &mt LSHFT J  &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
-&kp Z                &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N     &kp M        &mkp LCLK       &mkp RCLK    &kp LS(MINUS)
+&kp Z                &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N     &kp M        &mkp LCLK       &mkp RCLK    &kp LS(INTERNATIONAL_1)
 &kp INTERNATIONAL_4  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_esc     &L0_kana                                            &mt LEFT_GUI ENTER
             >;
 
@@ -307,10 +309,10 @@
 
         Move {
             bindings = <
-&none  &kp END         &kp HOME      &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)                                    &kakko_3  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&none  &kp DOWN_ARROW  &kp UP_ARROW  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp LBKT              &kp RBKT               &kp LG(LS(NUMBER_4))      &trans  &kakko_2  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&none  &kp PAGE_DOWN   &kp PAGE_UP   &trans                &trans                 &trans                    &trans  &trans                                                    &trans
+&none  &kp END         &kp HOME      &kp LS(RIGHT_BRACKET)  &kp PIPE                                                &kakko_3  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&none  &kp DOWN_ARROW  &kp UP_ARROW  &kp ASTERISK           &kp LEFT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp RIGHT_BRACKET      &kp BACKSLASH         &kp LG(LS(NUMBER_4))      &trans  &kakko_2  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&none  &kp PAGE_DOWN   &kp PAGE_UP   &trans                 &trans                &trans                    &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -329,10 +331,10 @@
 
         Symbols {
             bindings = <
-&kp LS(AMPERSAND)  &kp AT    &kp EXCLAMATION   &none         &kp QUESTION                                 &kp INT_YEN    &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
-&kp AT             &kp SEMI  &kp LS(DLLR)      &kp CARET     &kp LS(TILDE)  &trans           &trans       &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
-&none              &none     &kp SINGLE_QUOTE  &kp LS(PIPE)  &none          &bootloader      &bootloader  &kp TILDE      &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
-&bootloader        &none     &none             &trans        &trans         &trans           &trans       &trans                                         &bootloader
+&kp LS(AMPERSAND)  &kp AT    &kp EXCLAMATION   &none         &kp QUESTION                                &kp INT_YEN    &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
+&kp LEFT_BRACKET   &kp SEMI  &kp LS(DLLR)      &kp EQUAL     &kp PLUS      &trans           &trans       &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
+&none              &none     &kp SINGLE_QUOTE  &kp LS(PIPE)  &none         &bootloader      &bootloader  &kp CARET      &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
+&bootloader        &none     &none             &trans        &trans        &trans           &trans       &trans                                         &bootloader
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
