@@ -253,7 +253,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ASTERISK_CARET";
             #binding-cells = <0>;
-            bindings = <&kp KP_ASTERISK>, <&kp CARET>;
+            bindings = <&kp KP_ASTERISK>, <&kp EQUAL>;
 
             tapping-term-ms = <150>;
         };
@@ -329,10 +329,10 @@
 
         Symbols {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &none         &kp QUESTION                                 &kp LS(PIPE)   &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
-&kp AT            &kp SEMI           &kp LS(DLLR)     &kp CARET     &kp LS(TILDE)  &trans           &trans       &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
-&none             &none              &kp COLON        &kp LS(PIPE)  &none          &bootloader      &bootloader  &kp LS(AMPS)   &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
-&bootloader       &none              &none            &trans        &trans         &trans           &trans       &trans                                         &bootloader
+&kp LS(AMPERSAND)  &kp AT    &kp EXCLAMATION   &none         &kp QUESTION                                 &kp INT_YEN    &Align_M  &Align_C   &Align_V   &kp LS(PRCNT)
+&kp AT             &kp SEMI  &kp LS(DLLR)      &kp CARET     &kp LS(TILDE)  &trans           &trans       &kp LS(POUND)  &Align_L  &Align_T   &Align_B   &Align_R
+&none              &none     &kp SINGLE_QUOTE  &kp LS(PIPE)  &none          &bootloader      &bootloader  &kp TILDE      &Align_H  &mkp LCLK  &mkp RCLK  &kp LS(INTERNATIONAL_1)
+&bootloader        &none     &none             &trans        &trans         &trans           &trans       &trans                                         &bootloader
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
