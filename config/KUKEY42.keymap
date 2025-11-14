@@ -55,9 +55,7 @@
         kakko_1: kakko_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LA(GRAVE) &kp LPAR &kp RPAR &kp LEFT>,
-                <&macro_press>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>, <&macro_press>;
 
             label = "KAKKO_1";
         };
@@ -65,14 +63,14 @@
         kakko_2: kakko_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
             label = "KAKKO_2";
         };
 
         kakko_3: kakko_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(GRAVE) &kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
+            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
             label = "KAKKO_3";
         };
 
@@ -286,10 +284,10 @@
 
         Move {
             bindings = <
-&bootloader  &kp PAGE_DOWN   &kp PG_UP     &kp LS(LEFT_BRACKET)     &kp LS(RIGHT_BRACKET)                                       &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
-&none        &kp DOWN_ARROW  &kp UP_ARROW  &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&none        &msc SCRL_DOWN  &msc SCRL_UP  &kp LBKT                 &kp RBKT                  &kp LG(LS(NUMBER_4))      &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
-&none        &lt 0 END       &lt 0 HOME    &trans                   &trans                    &trans                    &trans  &trans                                                    &trans
+&none  &kp PAGE_DOWN   &kp PG_UP     &kp LS(LEFT_BRACKET)         &kp LS(RIGHT_BRACKET)                                    &kakko_2  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
+&none  &kp DOWN_ARROW  &kp UP_ARROW  &kp LS(KP_LEFT_PARENTHESIS)  &kp LS(N0)             &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
+&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp LBKT                     &kp RBKT               &kp LG(LS(NUMBER_4))      &trans  &kakko_3  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&none  &lt 0 END       &lt 0 HOME    &trans                       &trans                 &trans                    &trans  &trans                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
