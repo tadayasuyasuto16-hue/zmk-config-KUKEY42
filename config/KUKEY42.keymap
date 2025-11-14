@@ -278,7 +278,7 @@
 &q_ctrl_alt_del             &kp W        &kp E           &kp R        &kp T                                     &kp Y  &kp U          &kp I           &kp O        &P_PW
 &kp A                       &mt LCTRL S  &mt LEFT_ALT D  &mt LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H  &mt LSHFT J    &mt LEFT_ALT K  &mt LCTRL L  &kp BACKSPACE
 &kp Z                       &kp X        &kp C           &kp V        &kp B      &kp LC(Z)          &kp TAB     &kp N  &M_wheelclick  &mkp LCLK       &mkp RCLK    &kp UNDERSCORE
-&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &to 0                                              &mt LEFT_GUI ENTER
+&mt INTERNATIONAL_4 ESCAPE  &kp COMMA    &kp DOT         &to 0        &L1_space  &L2_hankaku        &L3_kana    &to 4                                              &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -319,10 +319,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &to 0   &trans  &mkp MB1  &mo 5   &mkp MB2  &mkp MB3
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &bootloader
+&bootloader  &trans  &trans  &trans  &bt BT_NXT                      &bt BT_PRV  &trans    &trans  &trans    &bootloader
+&trans       &trans  &trans  &trans  &trans      &trans      &to 0   &trans      &mkp MB1  &mo 5   &mkp MB2  &mkp MB3
+&trans       &trans  &trans  &trans  &trans      &trans      &trans  &trans      &trans    &trans  &trans    &trans
+&trans       &trans  &trans  &trans  &trans      &trans      &trans  &trans                                  &bootloader
             >;
         };
 
