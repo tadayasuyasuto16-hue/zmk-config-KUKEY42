@@ -293,9 +293,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <130>;
             hold-while-undecided;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
         };
     };
 
@@ -307,7 +307,7 @@
 &q_ctrl_alt_del      &kp W                         &kp E                            &kp R                         &kp T                                     &kp Y     &kp U                         &kp I                            &kp O                         &P_PW
 &kp A                &centerkeys_hold_tap LCTRL S  &centerkeys_hold_tap LEFT_ALT D  &centerkeys_hold_tap LSHFT F  &kp G      &kp BACKSPACE      &kp DELETE  &kp H     &centerkeys_hold_tap LSHFT J  &centerkeys_hold_tap LEFT_ALT K  &centerkeys_hold_tap LCTRL L  &kp BACKSPACE
 &kp Z                &kp X                         &kp C                            &kp V                         &kp B      &kp LC(Z)          &kp TAB     &kp N     &kp M                         &mkp LCLK                        &mkp RCLK                     &kp LS(INTERNATIONAL_1)
-&kp INTERNATIONAL_4  &kp COMMA                     &kp DOT                          &to 0                         &L1_space  &L2_hankaku        &L3_esc     &L0_kana                                                                                               &mt LEFT_GUI ENTER
+&kp INTERNATIONAL_4  &kp COMMA                     &kp DOT                          &bootloader                   &L1_space  &L2_hankaku        &L3_esc     &L0_kana                                                                                               &mt LEFT_GUI ENTER
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP>;
@@ -317,7 +317,7 @@
             bindings = <
 &none  &kp END         &kp HOME      &kp LS(RIGHT_BRACKET)  &kp PIPE                                                &kakko_3  &cs_left_c_left  &cs_up_c_up   &cs_down_c_down  &cs_right_c_right
 &none  &kp DOWN_ARROW  &kp UP_ARROW  &kp ASTERISK           &kp LEFT_PARENTHESIS  &trans                    &trans  &kakko_1  &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT
-&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp RIGHT_BRACKET      &kp BACKSLASH         &kp LG(LS(NUMBER_4))      &trans  &kakko_2  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
+&none  &msc SCRL_DOWN  &msc SCRL_UP  &kp LS(BACKSLASH)      &kp BACKSLASH         &kp LG(LS(NUMBER_4))      &trans  &kakko_2  &msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN   &msc SCRL_RIGHT
 &none  &kp PAGE_DOWN   &kp PAGE_UP   &trans                 &trans                &trans                    &trans  &trans                                                    &trans
             >;
 
